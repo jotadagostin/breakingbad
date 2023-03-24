@@ -1,59 +1,87 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    max-width: 1280px;
-    margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 main:after {
-    content: '';
-    min-height: 100vh;
-    width: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
-	z-index: -1;
+  content: "";
+  min-height: 100vh;
+  width: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.05926120448179273) 50%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  z-index: -1;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-evenly;
 }
 
 .information .logo {
-    max-width: 350px;
-    /* filter: invert(1); */
-    
-    margin-bottom: 80px;
+  max-width: 350px;
+  /* filter: invert(1); */
+
+  margin-bottom: 80px;
 }
 
 .information .description {
-    width: 49%;
-    font-size: 24px;
-    color: white;
-    line-height: 30px;
+  width: 49%;
+  font-size: 24px;
+  color: white;
+  line-height: 30px;
 }
 
 .buttom_carousel {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .buttom_carousel .button {
-    background-color: white;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solidd transparent;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solidd transparent;
 }
 
 .buttom_carousel .selected .button {
-    background-color: green;
+  background-color: green;
 }
 
 .aside-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+.aside-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.aside-menu .icon {
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.aside-menu .icon:hover {
+    transform: scale(1.2);
 }
