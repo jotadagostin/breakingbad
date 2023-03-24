@@ -53,9 +53,11 @@ main:after {
   height: 15px;
   border-radius: 50%;
   border: 2px solidd transparent;
+  cursor: pointer;
+  border-color: white;
 }
 
-.buttom_carousel .selected .button {
+.buttom_carousel  .button.selected {
   background-color: green;
 }
 
@@ -84,4 +86,32 @@ main:after {
 
 .aside-menu .icon:hover {
     transform: scale(1.2);
+}
+
+.carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carousel .image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: changeImage 0.7s;
+}
+
+.carousel .image.active {
+    display: block;
+}
+
+@keyframes changeImage {
+    from {
+        opacity: 0.85;
+    } to {
+        opacity: 1;
+    }
 }
