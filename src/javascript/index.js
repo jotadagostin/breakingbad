@@ -5,7 +5,7 @@ const images = document.querySelectorAll(".image");
 
 // - step 2 - find a way to identify the user's click on the button
 
-buttonsCarousel.forEach((button, index) => {
+buttonsCarousel.forEach((button, indeX) => {
   button.addEventListener("click", () => {
     // step 3  uncheck the previous selected button
     desactivateSelectedButton();
@@ -17,13 +17,13 @@ buttonsCarousel.forEach((button, index) => {
     hideActiveImage();
 
     //     step 6 - make the background image corresponding to the clicked button appear
-    showBackGroundImage(index);
+    showBackGroundImage(indeX);
   });
 });
 
-function showBackGroundImage(index) {
-  image[index].classList.add("active");
+function showBackGroundImage(indeX) {
 }
+image[indeX].classList.add("active");
 
 function selectButtonCarousel(button) {
   button.classList.add("selected");
