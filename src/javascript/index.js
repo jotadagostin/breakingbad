@@ -1,15 +1,40 @@
-/*
-OBJECTIVE - when we click on the button we have to show the corresponding background image
+// step 1 - find a way to get the HTML element of the buttons
 
-     - step 1 - find a way to get the HTML element of the buttons
+const buttonsCarousel = document.querySelectorAll(".button");
+const images = document.querySelectorAll(".image");
 
-- step 2 - find a way to identify the user's click on the button
+// - step 2 - find a way to identify the user's click on the button
 
-- step 3 - uncheck the previous selected button
+buttonsCarousel.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    // step 3  uncheck the previous selected button
+    desactivateSelectedButton();
 
-- step 4 - mark the clicked button as if it were selected
+    //     Step 4 mark the clicked button as if it were selected
+    selectButtonCarousel(button);
 
-- step 5 - hide previous background image
+    //   step 5 hide previous background image
+    hideActiveImage();
 
-- step 6 - make the background image corresponding to the clicked button appear
-*/
+    //     step 6 - make the background image corresponding to the clicked button appear
+    showBackGroundImage(index);
+  });
+});
+
+function showBackGroundImage(index) {
+  image[index].classList.add("active");
+}
+
+function selectButtonCarousel(button) {
+  button.classList.add("selected");
+}
+
+function hideActiveImage() {
+  const activeImage = document.querySelector(".active");
+  activeImage.classList.remove("active");
+}
+
+function desactivateSelectedButton() {
+  const buttonSelected = document.querySelector(".selected");
+  buttonSelected.classList.remove(".selected");
+}
