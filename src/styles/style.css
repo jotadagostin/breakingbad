@@ -40,13 +40,13 @@ main:after {
   line-height: 30px;
 }
 
-.buttom_carousel {
+.button_carousel {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.buttom_carousel .button {
+.button_carousel .button {
   background-color: white;
   width: 15px;
   height: 15px;
@@ -56,7 +56,7 @@ main:after {
   border-color: white;
 }
 
-.buttom_carousel .button.selected {
+.button_carousel .button.selected {
   background-color: green;
 }
 

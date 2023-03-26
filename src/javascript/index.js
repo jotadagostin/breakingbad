@@ -36,5 +36,5 @@ function hideActiveImage() {
 
 function desactivateSelectedButton() {
   const buttonSelected = document.querySelector(".selected");
-  buttonSelected.classList.remove(".selected");
+  buttonSelected.classList.remove("selected");
 }
